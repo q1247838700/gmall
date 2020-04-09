@@ -32,14 +32,16 @@ public class Resp<T> {
 
     public static<T> Resp<T> ok(T data){
         Resp<T> resp = new Resp<T>(data);
-        resp.setCode(0);//操作成功
+        //操作成功
+        resp.setCode(0);
         resp.setMsg("success");
         return resp;
     }
 
     public static<T> Resp<T> fail(String data){
         Resp<T> resp = new Resp<T>();
-        resp.setCode(1);//操作失败
+        //操作失败
+        resp.setCode(1);
         resp.setMsg(data);
         return resp;
     }
